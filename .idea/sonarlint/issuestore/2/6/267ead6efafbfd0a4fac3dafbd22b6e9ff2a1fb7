@@ -1,0 +1,9 @@
+
+m
+java:S3776 "RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(”เ่๙ÿÿÿÿ
+h
+java:S62046"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ชจน
+h
+java:S6204F"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ชจน
+h
+java:S6204U"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ชจน

@@ -1,0 +1,14 @@
+
+†	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(ï§ÇûùÿÿÿÿJ$c1fe7ac1-4253-49f2-9eb9-c61c783c11b7
+‡	java:S112ª"FDefine and throw a dedicated exception instead of using a generic one.(ÈêÒøúÿÿÿÿJ$ed4aedb7-c315-4982-8e71-d2cfa0f9b2bf
+‰
+java:S1192Â"GDefine a constant instead of duplicating this literal "amount" 3 times.(ÉşêûÿÿÿÿJ$6d41abfc-e72a-4d6a-90dd-55ddc3f8a0cf
+ƒ	java:S125]"<This block of commented-out lines of code should be removed.(çÙ¡Íüÿÿÿÿ8æÔÕÚ4J$71142bcd-ceeb-42e9-9f4e-2dde4c4da811
+•
+java:S2139¨"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾J$5e1dc149-e67f-4eea-9d01-43d5832308c8
+–
+java:S5850Ë"TGroup parts of the regex together to make the intended operator precedence explicit.(¤µó ûÿÿÿÿJ$c7000628-2cca-4477-b70f-a69ac6eae05b
+l
+java:S5869Ë"*Remove duplicates in this character class.(¤µó ûÿÿÿÿJ$e5400a15-57b2-4173-96d6-e908e18338d1
+‡
+java:S6019Ë"EFix this reluctant quantifier that will only ever match 1 repetition.(¤µó ûÿÿÿÿJ$da220938-c8bb-46b9-8603-f53013af470c

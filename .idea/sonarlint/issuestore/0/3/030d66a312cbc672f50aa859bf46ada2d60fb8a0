@@ -1,0 +1,22 @@
+
+š
+java:S1192Q"WDefine a constant instead of duplicating this literal "AWAITING_CLARIFICATION" 3 times.(³ğà·8¦Åûƒ4J$57c715cc-82d2-445d-b138-81945440bf65
+‹
+java:S1192˜"GDefine a constant instead of duplicating this literal "FAILED" 3 times.(Ğ–Õğ8§Åûƒ4J$bff54f68-aa71-4bf6-b414-4396797bec45
+˜
+java:S1192<"PDefine a constant instead of duplicating this literal "INVALID_REQUEST" 3 times.(åÀÓùûÿÿÿÿ8¨Åûƒ4J$a6020080-71f6-41e5-82c9-edd072d0ba8d
+š
+java:S1192g"RDefine a constant instead of duplicating this literal "VALIDATION_FAILED" 6 times.(åõª¯üÿÿÿÿ8©Åûƒ4J$b09d169d-137d-4df3-b173-a472293daa64
+ˆ	java:S107%"AConstructor has 8 parameters, which is greater than 7 authorized.(ë±±øÿÿÿÿ8¾¤Åûƒ4J$eb3ebcb7-7dee-41c2-ac3e-14545a15ca7d
+š
+java:S37768"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(È’¯îıÿÿÿÿ8Ñ¤Åûƒ4J$0b82a630-95f9-498d-9557-2eb37c0f108f
+n
+java:S14528"&Remove usage of generic wildcard type.(È’¯îıÿÿÿÿ8î¤Åûƒ4J$f84bddf6-1852-44f7-9508-08f0bc68f20d
+–
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8Â¥Åûƒ4J$20795cae-e03b-46be-9915-9231325d2cbd
+o
+java:S1452¡"&Remove usage of generic wildcard type.(¿ÊŠäûÿÿÿÿ8¼¦Åûƒ4J$02ac64e9-c9d5-478e-bf99-e39c433f9d96
+j
+java:S1452æ"&Remove usage of generic wildcard type.(áË¹ó8õ¦Åûƒ4J$59de9bc4-4b71-4dfc-884c-6fbf7bc9955d
+
+java:S65418"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 194 to 64, Complexity from 19 to 14, Nesting Level from 3 to 2, Number of Variables from 35 to 6.(È’¯îıÿÿÿÿ8‘§Åûƒ4J$0ab78b54-fcee-48e2-a7d7-830187b27477

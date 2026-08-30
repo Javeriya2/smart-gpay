@@ -1,0 +1,35 @@
+Here is a set of sequential prompts you can feed into Antigravity, alongside your project brief, to build Smart GPay for the Patchamomma 2026 Hackathon.
+
+These prompts are structured to strictly follow the constraints outlined in your document, specifically prioritizing the database setup before moving to business logic and ensuring the architecture is built incrementally.
+
+### Prompt 1: Project Initialization & Database Setup
+
+**Context:** The brief explicitly states that the first build step must be setting up the database and schema before any business logic is added.
+
+> "Here is the project brief for Smart GPay. As per the strict constraints, our first step is database setup. I am providing the database schema in a separate message. Please initialize a Spring Boot (Java) project with Spring Data JPA/Hibernate and configure it to connect to a PostgreSQL database. Generate the JPA entities and repositories based *strictly* on the schema I provide—do not invent or alter any table structures. Once complete, write basic tests to confirm that the queries and mappings work correctly before we move on to any business logic."
+> 
+> 
+
+### Prompt 2: Core Entity Logic (Contacts, Aliases & Traceability)
+
+**Context:** This establishes the foundational rules for how data behaves before integrating the AI.
+
+> "With the database verified, let's implement the core service layer rules based on the Smart GPay brief. First, implement the logic differentiating a 'contact' (a real payee with a mocked VPA like `name@okaxis`) from an 'alias' (a nickname pointing to an existing contact). Ensure the system can handle duplicate names as genuinely different contacts. Next, implement the Transaction Traceability system: every transaction must move through specific states (e.g., request received, intent understood, awaiting clarification, contact confirmed, validation failed, processing, success, failed). The system must maintain a full history of these state changes per transaction, not just the final outcome."
+> 
+> 
+
+### Prompt 3: Natural Language Integration (Gemini NLU)
+
+**Context:** Hooking up the AI to parse the user's messy text into structured data.
+
+> "Now, let's integrate the Natural Language Understanding component using Google Gemini via Vertex AI. Create a service that takes a plain-language payment request (typed or spoken) and parses it into a structured intent. The system must extract the action (transfer or bill pay), the exact amount, and the recipient. Additionally, set up a utility using Gemini to generate natural language responses back to the user, which we will use for confirmations and clarification questions."
+> 
+> 
+
+### Prompt 4: The Disambiguation Flow & Mock Payment Execution
+
+**Context:** Building the safety mechanism and finalizing the simulated transaction.
+
+> "Finally, let's build the Disambiguation/Clarification Flow and the payment executor. If the Gemini intent extraction reveals missing details (like the amount), or if the recipient matches multiple duplicate contacts, the system must *not* guess. It must halt the transaction state, use Gemini to generate a clarifying question for the user, and wait for a reply before proceeding. Once the recipient and amount are confidently confirmed and validated (e.g., checking sufficient balance), execute the payment. Since real UPI transactions are restricted, this payment execution must be mocked/simulated. Conclude the flow by generating a natural language response confirming the success, failure, or reason for failure to the user."
+> 
+>
