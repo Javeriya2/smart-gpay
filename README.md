@@ -9,6 +9,7 @@ AI-powered natural language payment assistant. Send money by simply saying "Send
 - 🤔 Multi-turn clarification for ambiguous requests
 - 📝 Full transaction audit trail
 - 🏦 Mock UPI payment system
+- Integration with BigQuery for analytics
 
 ## Tech Stack
 
