@@ -64,5 +64,5 @@ mvn test  # 13+ tests, all passing
 
 ---
 
-Built for Hackathon (Aug-Sep 2026) | [View Demo](http://localhost:8080)
+Built for Patchamomma 2026
 
