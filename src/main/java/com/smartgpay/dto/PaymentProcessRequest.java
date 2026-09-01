@@ -5,6 +5,8 @@ public class PaymentProcessRequest {
     private Long userId;
     private String userMessage;
     private Boolean confirmFraudWarning = false;
+    private Long transactionId;
+    private String originalRequestId;
 
     public PaymentProcessRequest() {
     }
@@ -19,6 +21,14 @@ public class PaymentProcessRequest {
         this.userId = userId;
         this.userMessage = userMessage;
         this.confirmFraudWarning = confirmFraudWarning != null ? confirmFraudWarning : false;
+    }
+
+    public PaymentProcessRequest(Long userId, String userMessage, Boolean confirmFraudWarning, Long transactionId, String originalRequestId) {
+        this.userId = userId;
+        this.userMessage = userMessage;
+        this.confirmFraudWarning = confirmFraudWarning != null ? confirmFraudWarning : false;
+        this.transactionId = transactionId;
+        this.originalRequestId = originalRequestId;
     }
 
     public Long getUserId() {
@@ -43,5 +53,21 @@ public class PaymentProcessRequest {
 
     public void setConfirmFraudWarning(Boolean confirmFraudWarning) {
         this.confirmFraudWarning = confirmFraudWarning;
+    }
+
+    public Long getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(Long transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    public String getOriginalRequestId() {
+        return originalRequestId;
+    }
+
+    public void setOriginalRequestId(String originalRequestId) {
+        this.originalRequestId = originalRequestId;
     }
 }

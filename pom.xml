@@ -16,6 +16,20 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
+	<!-- Spring Cloud GCP BOM should be at the project level, outside dependencies -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.google.cloud</groupId>
+				<artifactId>spring-cloud-gcp-dependencies</artifactId>
+				<version>5.2.0</version> <!-- Updated to match Spring Boot 3.2.x compatibility -->
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -47,7 +61,27 @@
 			<artifactId>google-cloud-vertexai</artifactId>
 			<version>1.7.0</version>
 		</dependency>
+		<!-- Spring Cloud GCP Starter for BigQuery -->
+		<!-- Spring Cloud GCP Starter for BigQuery -->
+		<dependency>
+			<groupId>com.google.cloud</groupId>
+			<artifactId>spring-cloud-gcp-starter-bigquery</artifactId>
+		</dependency>
+
+		<!-- Google Cloud BigQuery API Client Library -->
+		<dependency>
+			<groupId>com.google.cloud</groupId>
+			<artifactId>google-cloud-bigquery</artifactId>
+		</dependency>
+
+		<!-- OpenPDF for generating PDF documents -->
+		<dependency>
+			<groupId>com.github.librepdf</groupId>
+			<artifactId>openpdf</artifactId>
+			<version>1.3.38</version>
+		</dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>

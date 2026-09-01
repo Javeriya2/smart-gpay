@@ -64,7 +64,9 @@ public class PaymentFlowController {
 
         Long userId = request.getUserId();
         String userMessage = request.getUserMessage().trim();
-        String originalRequestId = "req-" + UUID.randomUUID().toString().substring(0, 8);
+        String originalRequestId = (request.getOriginalRequestId() != null && !request.getOriginalRequestId().isBlank())
+                ? request.getOriginalRequestId()
+                : "req-" + UUID.randomUUID().toString().substring(0, 8);
         logger.info("Processing payment request: userId={}, requestId='{}', prompt='{}'", userId, originalRequestId, userMessage);
 
         try {

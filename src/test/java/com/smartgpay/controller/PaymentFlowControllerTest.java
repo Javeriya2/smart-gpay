@@ -124,11 +124,13 @@ class PaymentFlowControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.status", is("FRAUD_WARNING")))
                 .andExpect(jsonPath("$.transactionId", notNullValue()))
+                .andExpect(jsonPath("$.originalRequestId", notNullValue()))
                 .andExpect(jsonPath("$.proceedWithConfirmation", is(true)))
                 .andExpect(jsonPath("$.message", containsString("High-value first transfer to a new recipient")))
                 .andReturn().getResponse().getContentAsString();
 
         Long transactionId = objectMapper.readTree(warningRespJson).get("transactionId").asLong();
+        String originalRequestId = objectMapper.readTree(warningRespJson).get("originalRequestId").asText();
 
         // Verify DB Transaction status is FRAUD_WARNING
         Transaction fraudTx = transactionRepository.findById(transactionId).orElseThrow();
@@ -140,8 +142,8 @@ class PaymentFlowControllerTest {
         assertThat(warningLogs.get(0).getStatus()).isEqualTo(TransactionStatus.FRAUD_WARNING);
         assertThat(warningLogs.get(0).getNote()).contains("High-value first transfer");
 
-        // 2. Client resubmits with confirmFraudWarning = true
-        PaymentProcessRequest confirmRequest = new PaymentProcessRequest(testUser.getId(), "Send ₹15000 to Rahul", true);
+        // 2. Client resubmits with confirmFraudWarning = true and same originalRequestId
+        PaymentProcessRequest confirmRequest = new PaymentProcessRequest(testUser.getId(), "Send ₹15000 to Rahul", true, transactionId, originalRequestId);
 
         mockMvc.perform(post("/api/payment/process")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -151,7 +153,7 @@ class PaymentFlowControllerTest {
                 .andExpect(jsonPath("$.amount", is(15000.0)))
                 .andExpect(jsonPath("$.newBalance", is(185000.0)));
 
-        // Verify DB audit log progression: FRAUD_WARNING -> PROCESSING -> SUCCESS
+        // Verify DB audit log progression on the SAME transaction: FRAUD_WARNING -> PROCESSING -> SUCCESS
         List<TransactionStatusLog> finalLogs = transactionStatusLogRepository.findByTransactionIdOrderByCreatedAtAsc(transactionId);
         assertThat(finalLogs).extracting(TransactionStatusLog::getStatus)
                 .containsExactly(TransactionStatus.FRAUD_WARNING, TransactionStatus.PROCESSING, TransactionStatus.SUCCESS);

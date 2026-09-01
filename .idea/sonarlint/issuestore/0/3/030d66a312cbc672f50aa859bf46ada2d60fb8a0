@@ -1,22 +1,22 @@
 
 
-java:S1192Q"WDefine a constant instead of duplicating this literal "AWAITING_CLARIFICATION" 3 times.(³πΰ·8¦Εϋƒ4J$57c715cc-82d2-445d-b138-81945440bf65
+java:S1192S"WDefine a constant instead of duplicating this literal "AWAITING_CLARIFICATION" 3 times.(³πΰ·8ί–ΏΔ…4J$d4043caf-c6eb-4a2e-9bef-affbe3b04d29
 ‹
-java:S1192"GDefine a constant instead of duplicating this literal "FAILED" 3 times.(Π–Υπ8§Εϋƒ4J$bff54f68-aa71-4bf6-b414-4396797bec45
+java:S1192"GDefine a constant instead of duplicating this literal "FAILED" 3 times.(Π–Υπ8α–ΏΔ…4J$db35d819-bc75-41c4-949e-ce505f3fe59c
 
-java:S1192<"PDefine a constant instead of duplicating this literal "INVALID_REQUEST" 3 times.(εΐΣωϋÿÿÿÿ8¨Εϋƒ4J$a6020080-71f6-41e5-82c9-edd072d0ba8d
+java:S1192<"PDefine a constant instead of duplicating this literal "INVALID_REQUEST" 3 times.(εΐΣωϋÿÿÿÿ8α–ΏΔ…4J$021ee544-4aee-4128-8a8d-8579baf34d90
 
-java:S1192g"RDefine a constant instead of duplicating this literal "VALIDATION_FAILED" 6 times.(ευª―όÿÿÿÿ8©Εϋƒ4J$b09d169d-137d-4df3-b173-a472293daa64
-	java:S107%"AConstructor has 8 parameters, which is greater than 7 authorized.(λ±±ψÿÿÿÿ8Ύ¤Εϋƒ4J$eb3ebcb7-7dee-41c2-ac3e-14545a15ca7d
+java:S1192i"RDefine a constant instead of duplicating this literal "VALIDATION_FAILED" 6 times.(ευª―όÿÿÿÿ8α–ΏΔ…4J$97c9277b-4760-4928-aee5-f5f9fa906751
+	java:S107%"AConstructor has 8 parameters, which is greater than 7 authorized.(λ±±ψÿÿÿÿ8ΈΏΔ…4J$219d28f7-2617-4a2d-896e-76bbba8c4a47
 
-java:S37768"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Θ’―ξύÿÿÿÿ8Ρ¤Εϋƒ4J$0b82a630-95f9-498d-9557-2eb37c0f108f
+java:S37768"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(Θ’―ξύÿÿÿÿ8ΓΏΔ…4J$66d5c4a2-bf59-42c6-af90-b18312a7407c
 n
-java:S14528"&Remove usage of generic wildcard type.(Θ’―ξύÿÿÿÿ8ξ¤Εϋƒ4J$f84bddf6-1852-44f7-9508-08f0bc68f20d
+java:S14528"&Remove usage of generic wildcard type.(Θ’―ξύÿÿÿÿ8ΙΏΔ…4J$3030d9e3-15bf-4ca4-bd14-dc2e62496716
 –
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨Ή8Β¥Εϋƒ4J$20795cae-e03b-46be-9915-9231325d2cbd
+java:S6204’"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨Ή8ΥΏΔ…4J$85cc581f-2306-49bb-875a-543285489ebc
 o
-java:S1452΅"&Remove usage of generic wildcard type.(ΏΚδϋÿÿÿÿ8Ό¦Εϋƒ4J$02ac64e9-c9d5-478e-bf99-e39c433f9d96
+java:S1452£"&Remove usage of generic wildcard type.(ΏΚδϋÿÿÿÿ8ίΏΔ…4J$0e906bab-44ed-40e4-a0f7-434af58c16d7
 j
-java:S1452ζ"&Remove usage of generic wildcard type.(αΛΉσ8υ¦Εϋƒ4J$59de9bc4-4b71-4dfc-884c-6fbf7bc9955d
+java:S1452θ"&Remove usage of generic wildcard type.(αΛΉσ8ιΏΔ…4J$83dd6963-d3cf-4c81-8975-bca3ae8b65f9
 
-java:S65418"ΖA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 194 to 64, Complexity from 19 to 14, Nesting Level from 3 to 2, Number of Variables from 35 to 6.(Θ’―ξύÿÿÿÿ8‘§Εϋƒ4J$0ab78b54-fcee-48e2-a7d7-830187b27477
+java:S65418"ΖA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 196 to 64, Complexity from 21 to 14, Nesting Level from 3 to 2, Number of Variables from 35 to 6.(Θ’―ξύÿÿÿÿ8ςΏΔ…4J$18add0c8-a3ac-430f-8df9-36d5664712ea
