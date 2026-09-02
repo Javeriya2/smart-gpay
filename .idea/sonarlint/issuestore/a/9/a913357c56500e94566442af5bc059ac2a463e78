@@ -1,0 +1,9 @@
+
+“
+java:S3655^"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Þž†›8Ñ ÿúƒ4J$987ceb62-c1e0-4bad-b971-25000f3431ca
+‡
+java:S2583ì"CChange this condition so that it does not always evaluate to "true"(‘êÜ 8Ô ÿúƒ4J$c14c2e02-828a-4c45-b29a-b13f0a5c203a
+‡
+java:S2583µ"CChange this condition so that it does not always evaluate to "true"(‘êÜ 8Ô ÿúƒ4J$e17e3b55-f875-45d5-bed0-4a41194b5661
+€
+java:S1068"8Remove this unused "paymentLimitsService" private field.(ßÔ•Óùÿÿÿÿ8áŠ ûƒ4J$658cff27-c101-4bc4-8872-402fac7fd366
