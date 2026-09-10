@@ -7,8 +7,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
+@RequestMapping("/api")
 public class DataSyncController {
 
     private static final Logger logger = LoggerFactory.getLogger(DataSyncController.class);
@@ -19,7 +22,8 @@ public class DataSyncController {
     }
 
     /**
-     * On-demand endpoint to sync the entire PostgreSQL database to BigQuery
+     * On-demand endpoint to sync the entire
+     * PostgreSQL database to BigQuery
      * Endpoint: POST /api/admin/sync-bigquery
      */
     @PostMapping("/sync-bigquery")

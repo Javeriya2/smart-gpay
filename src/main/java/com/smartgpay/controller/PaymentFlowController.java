@@ -184,6 +184,11 @@ public class PaymentFlowController {
 
             Contact matchedContact = resolution.getMatchedContact();
 
+            logger.info("MATCHED CONTACT: id={}, name='{}', vpa='{}'",
+                    matchedContact.getId(),
+                    matchedContact.getName(),
+                    matchedContact.getVpa());
+
             // Step 4: Balance Validation Check
             Optional<User> senderOptional = userRepository.findById(userId);
             if (senderOptional.isPresent()) {

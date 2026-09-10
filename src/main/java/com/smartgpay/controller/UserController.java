@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
+    @CrossOrigin(origins = "http://localhost:5173")
 public class UserController {
 
     private final UserRepository userRepository;
@@ -39,7 +40,22 @@ public class UserController {
                     .body("Error retrieving user: " + e.getMessage());
         }
     }
+    @GetMapping("/name/{name}")
+    public ResponseEntity<?> getUserByName(@PathVariable String name) {
+        try {
+            Optional<User> userOptional = userRepository.findByNameIgnoreCase(name);
 
+            if (userOptional.isPresent()) {
+                return ResponseEntity.ok(userOptional.get());
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body("User not found with name: " + name);
+            }
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error retrieving user: " + e.getMessage());
+        }
+    }
     @PostMapping
     public ResponseEntity<?> createUser(@RequestBody UserDTO userDTO) {
         try {
